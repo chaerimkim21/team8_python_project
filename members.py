@@ -1,7 +1,5 @@
 import hashlib
 
-#----- 클래스 정의 ------
-
 class Member:
     def __init__(self, name, username, password):
         self.name = name
@@ -29,26 +27,45 @@ class Post:
     def display(self):
         print(f"제목: {self.title}, 내용: {self.content}, 작성자: {self.author}")
 
-#----- 샘플 멤버 및 포스트 생성 함수 ------
+# 회원 생성
+members = [
+    Member("Bruce Wayne", "bwayne", "1234"),
+    Member("Jane Austen", "jausten", "2345"),
+    Member("Donna Tartt", "dtartt", "5678")
+]
 
-def create_sample_members():
-    members = []
-    members.append(Member("Bruce Wayne", "bwayne", "1234"))
-    members.append(Member("Jane Austen", "jausten", "2345"))
-    members.append(Member("Donna Tartt", "dtartt", "5678"))
-    return members
+# 각 회원별 포스트 딕셔너리
+posts = []
 
-def create_sample_posts(members):
-    posts = []
-    for member in members:
-        for i in range(1, 4):
-            posts.append(Post(f"{member.username}_post{i}", "hello", member.username))
-    return posts
+bruce_posts = [
+    {"title": "안녕", "content": "hello, 잘 지내세요"},
+    {"title": "hi", "content": "아니요, 잘 못 지냅니다"},
+    {"title": "how_Are_you", "content": "그런가봐요, 아닌가봐요"}
+]
 
-#----- 실행 코드 ------
+jane_posts = [
+    {"title": "hello", "content": "오늘은 어떤 책을 읽을까요?"},
+    {"title": "안녕하세요", "content": "하루가 참 짧네요"},
+    {"title": "반갑습니다", "content": "여러분들도 좋아하는 책 추천해주세요!"}
+]
 
-members = create_sample_members()
-posts = create_sample_posts(members)
+donna_posts = [
+    {"title": "당신은", "content": "우리 모두 책을 사랑합시다!"},
+    {"title": "누구입니까", "content": "책을 읽는 건 마음을 풍부하게 합니다"},
+    {"title": "나는당근입니다", "content": "책 읽고 나서 무엇을 느꼈나요?"}
+]
+
+# 각 회원별 포스트를 전체 포스트 리스트에 추가
+for post_data in bruce_posts:
+    posts.append(Post(post_data["title"], post_data["content"], members[0].username))
+
+for post_data in jane_posts:
+    posts.append(Post(post_data["title"], post_data["content"], members[1].username))
+
+for post_data in donna_posts:
+    posts.append(Post(post_data["title"], post_data["content"], members[2].username))
+
+# 실행 코드
 
 num_members = int(input("추가할 멤버 수를 입력하세요: "))
 input_members = []
@@ -65,8 +82,7 @@ for member in input_members:
         input_content = input(f"포스트 {i}의 내용을 입력하세요: ")
         posts.append(Post(input_title, input_content, member.username))
 
-#----- 결과 출력 ------
-
+# 결과 출력
 print("\n=== 회원 목록 ===")
 for member in members:
     member.display()
