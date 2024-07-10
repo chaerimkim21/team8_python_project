@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
 <div align=center>:satisfied:<h3>이 저장공간은 팀스파르타 파이썬 8조 팀과제를 위한 공간입니다.</h3>
 
-![rsp_web_screen](https://github.com/chaerimkim21/team8_python_project/assets/90311848/4c240cdf-2ca3-48de-b694-403159804a1d)
+![rsp_web_screen](https://github.com/chaerimkim21/team8_python_project/assets/90311848/8a0f03b2-ec64-4b0f-a5d6-ca082682c192)
 
 <h2>:clock130:작업소요기간:2024-07-03~2024-07-09:ok_hand:</h2>
 
