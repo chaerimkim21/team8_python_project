@@ -36,7 +36,11 @@
             <p>{{ message }}</p>
             {% endif %}
             {% if data %}
-            <p>사용자: {{ data.player_choice }} 컴퓨터: {{ data.computer_choice }} {{ data.result }}</p>
+            <p>사용자: {% if data.player_choice == '가위' %} &#9996; 가위 {% elif data.player_choice == '바위' %}
+                &#128074; 바위 {% elif data.player_choice == '보' %} &#9995; 보 {% endif %}
+                컴퓨터: {% if data.computer_choice == '가위' %} &#9996; 가위 {% elif data.computer_choice == '바위' %}
+                &#128074; 바위 {% elif data.computer_choice == '보' %} &#9995; 보 {% endif %}
+                {{ data.result }}</p>
             <div class="count mb-4">
                 <span class="btn btn-primary">승: {{ data.wins }}</span>
                 <span class="btn btn-primary">무: {{ data.ties }}</span>
