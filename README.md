@@ -20,9 +20,9 @@
  <div align=center>
 <h3>:book:Explanation
     
-:one: 회원 관리 프로그램
+<h5>:one: 회원 관리 프로그램</h5>
 
-#### 회원 관리 (Member Management)
+<h6>회원 관리 (Member Management)</h6>>
 
 - **회원 등록 (Member Registration)**
     - 사용자로부터 이름, 사용자 아이디, 비밀번호를 입력받아 새로운 회원을 등록합니다.
@@ -34,7 +34,7 @@
 - **회원 리스트 관리 (Manage List of Members)**
     - 모든 등록된 회원의 정보를 리스트 형식으로 관리합니다.
 
-#### 게시물 관리 (Post Management)
+<h6> 게시물 관리 (Post Management)</h6>>
 
 - **게시물 작성 (Create Post)**
     - 회원은 제목과 내용을 입력하여 게시물을 작성할 수 있습니다.
@@ -46,7 +46,7 @@
     - 각 회원은 자신의 게시물을 작성하고 관리할 수 있습니다.
     - 각 회원별로 게시물을 저장하여 관리합니다.
 
-#### 실행 코드 (Execution Code)
+<h6> 실행 코드 (Execution Code)</h6>>
 
 - **회원 추가 (Add Members)**
     - 사용자로부터 추가할 회원의 수와 각 회원의 이름, 사용자 아이디, 비밀번호를 입력받아 회원을 추가합니다.
@@ -68,20 +68,20 @@
     - 게시물 리스트를 순회하며 내용에 키워드가 포함된 경우 제목을 출력합니다.
 
 
-:two: 가위바위보 웹 게임
-#### 웹 애플리케이션 설정 및 구성 (Web Application Setup and Configuration)
+<h5>:two: 가위바위보 웹 게임</h5>>
+<h6> 웹 애플리케이션 설정 및 구성 (Web Application Setup and Configuration)</h6>>
 
 - **Flask 애플리케이션 설정 (Flask Application Configuration)**
     - Flask를 사용하여 웹 애플리케이션을 설정하고 시작합니다.
     - 데이터베이스는 SQLite를 사용하며, SQLAlchemy와 Flask-Migrate를 통해 데이터베이스 관리 및 마이그레이션을 수행합니다.
 
-#### 데이터베이스 모델 (Database Model)
+<h6> 데이터베이스 모델 (Database Model)</h6>>
 
 - **GameRecord 모델 (GameRecord Model)**
     - 게임 기록을 저장하기 위한 데이터베이스 모델입니다.
     - 필드: `id` (게임 ID), `player_choice` (사용자가 선택한 가위, 바위, 보), `computer_choice` (컴퓨터가 선택한 가위, 바위, 보), `result` (게임 결과), `wins` (승리 횟수), `losses` (패배 횟수), `ties` (무승부 횟수).
 
-#### 라우팅 및 핸들러 (Routing and Handlers)
+<h6> 라우팅 및 핸들러 (Routing and Handlers)</h6>>
 
 - **홈페이지 라우트 (Home Route)**
     - "/" 경로로 접속 시 게임 기록을 조회하여 홈페이지(index.html)를 렌더링합니다.
