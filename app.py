@@ -2,6 +2,13 @@
 '''
 0. Flask : 웹서버를 시작할 수 있는 기능. app이라는 이름으로 플라스크를 시작한다
 1. render_template : html파일을 가져와서 보여준다
+2. request : 클라이언트로부터 HTTP 요청을 처리
+3. jsonify :  JSON 응답을 생성하기 위해 사용
+4. redirect : 클라이언트를 다른 URL로 리디렉션시키는 데 사용
+5. url_for : URL 빌드를 돕는 함수로, 엔드포인트 이름을 기반으로 URL 생성
+6. SQLAlchemy :  데이터베이스 모델 정의, 쿼리 실행
+7. Migrate : 데이터베이스 스키마의 변경 추적, 관리
+8. random : 랜덤한 값을 생성하기 위해 사용
 '''
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 import os
@@ -50,6 +57,7 @@ def reset_data():
         return redirect(url_for('index'))
     except Exception as e:
         db.session.rollback()
+        #JSON 형식의 응답 보냄
         return jsonify({'message': f'Failed to reset data: {str(e)}'}), 500
 
 @app.route("/")
