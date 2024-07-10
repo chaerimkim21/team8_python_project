@@ -14,14 +14,18 @@
         <h1 class="mt-5 mb-4">가위바위보 게임</h1>
 
         <div class="input mb-4">
-            <form action="{{url_for('play')}}" method="post">
-                <label for="player_choice" class="mb-2">가위, 바위, 보 중 하나를 선택하세요!</label><br>
-                <input type="text" name="player_choice" required>
+            <form action="{{ url_for('play') }}" method="post">
+                <label for="player_choice" class="mb-2">&#9996, &#128074, &#9995 중 하나를 선택하세요!</label><br>
+                <select name="player_choice" id="player_choice" class="form-select form-select-lg mb-3" required>
+                    <option value="가위">&#9996;</option>
+                    <option value="바위">&#128074;</option>
+                    <option value="보">&#9995;</option>
+                </select>
                 <button type="submit" class="btn btn-primary">제출하기</button>
             </form>
         </div>
         <div class="reset mb-4">
-            <form action="{{url_for('reset_data')}}" method="post">
+            <form action="{{ url_for('reset_data') }}" method="post">
                 <!--JS로 버튼 클릭 시 초기화 여부 확인하는 대화상자 출력-->
                 <input type="submit" class="btn btn-primary" value="초기화"
                     onclick="return confirm('게임 데이터를 초기화하시겠습니까?');">
@@ -29,14 +33,18 @@
         </div>
         <div class="result">
             {% if message %}
-            <p>{{message}}</p>
+            <p>{{ message }}</p>
             {% endif %}
             {% if data %}
-            <p>사용자: {{data.player_choice}} 컴퓨터: {{data.computer_choice}} {{data.result}}</p>
+            <p>사용자: {% if data.player_choice == '가위' %} &#9996; 가위 {% elif data.player_choice == '바위' %}
+                &#128074; 바위 {% elif data.player_choice == '보' %} &#9995; 보 {% endif %}
+                컴퓨터: {% if data.computer_choice == '가위' %} &#9996; 가위 {% elif data.computer_choice == '바위' %}
+                &#128074; 바위 {% elif data.computer_choice == '보' %} &#9995; 보 {% endif %}
+                {{ data.result }}</p>
             <div class="count mb-4">
-                <span class="btn btn-primary">승: {{data.wins}}</span>
-                <span class="btn btn-primary">무: {{data.ties}}</span>
-                <span class="btn btn-primary">패: {{data.losses}}</span>
+                <span class="btn btn-primary">승: {{ data.wins }}</span>
+                <span class="btn btn-primary">무: {{ data.ties }}</span>
+                <span class="btn btn-primary">패: {{ data.losses }}</span>
             </div>
             <table class="table">
                 <thead>
