@@ -1,12 +1,13 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
-<div align=center>:satisfied:<h3>이 저장공간은 팀스파르타 파이썬 8조 팀과제를 위한 공간입니다.</h3>:pray:
+<div align=center>:satisfied:<h3>이 저장공간은 팀스파르타 파이썬 8조 팀과제를 위한 공간입니다.</h3>
 
 ![rsp_web_screen](https://github.com/chaerimkim21/team8_python_project/assets/90311848/4c240cdf-2ca3-48de-b694-403159804a1d)
 
 <h2>:clock130:작업소요기간:2024-07-03~2024-07-09:ok_hand:</h2>
 
-<h3>:open_file_folder:프로젝트 구조</h3>:v:
-├── README.md
+<h3>:open_file_folder:프로젝트 구조:v:</h3>
+</div>
+├── README.me
 ├── __pycache__
 ├── .venv
 ├── migrations
@@ -16,9 +17,12 @@
 ├── database.db
 └── members.py
 
+ <div align=center>
 <h3>:book:Explanation
+    
 :one: 회원 관리 프로그램
-### 회원 관리 (Member Management)
+
+#### 회원 관리 (Member Management)
 
 - **회원 등록 (Member Registration)**
     - 사용자로부터 이름, 사용자 아이디, 비밀번호를 입력받아 새로운 회원을 등록합니다.
@@ -94,16 +98,14 @@
 
 
 <h2>:round_pushpin: Stack</h2>
-- Backend: <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#3776AB</font></font>Python, <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#000000</font></font>Flask, <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#003B57</font></font>SQLite
-- Frontend: <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#E34F26</font></font>HTML, <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#1572B6</font></font>CSS, <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">#7952B3</font></font>Bootstrap
+- Backend: Python, Flask, SQLite
+- Frontend: HTML,CSS, Bootstrap
 
 <h2>:family: Developer </h2>
 - :angel: 김채림(조장)
 - :raising_hand: 임성혁(조원)
 - :massage: 임선오(조원)
 - :boy: 조도흠(조원)
-- :man: 박준희(조원)
-- :man: 박준희(조원)
 - :man: 박준희(조원)
 
 </div>
